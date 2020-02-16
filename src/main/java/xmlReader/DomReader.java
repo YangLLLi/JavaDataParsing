@@ -15,6 +15,10 @@ import java.util.List;
 
 /**
  * @author Yang
+ *
+ * xml内包含string int 和bool三种类型
+ * json包含string number bool array object
+ * sql包含string int double bool date等
  */
 @Getter
 @Setter
@@ -91,13 +95,13 @@ public class DomReader {
                     case "isbn":
                         String lang = item.getAttribute("lang");
                         Isbn isbn=new Isbn();
-                        isbn.setIsbn(nodeText);
+                        isbn.setValue(nodeText);
                         isbn.setLang(lang);
                         book.setIsbn(isbn);
                         break;
                     case "tag":
                         Tag tag = new Tag();
-                        tag.setTag(nodeText);
+                        tag.setValue(nodeText);
                         book.getTags().add(tag);
                         break;
                     default:

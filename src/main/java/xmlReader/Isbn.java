@@ -12,5 +12,5 @@ import lombok.ToString;
 @ToString
 public class Isbn {
     private String lang;
-    private String isbn;
+    private String value;
 }
