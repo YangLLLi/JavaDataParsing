@@ -20,7 +20,7 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.10.1</version>
         </dependency>
-<!--        jackson对jdk8中时间类的支持-->
+        <!--        jackson对jdk8中时间类的支持-->
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-parameter-names</artifactId>
@@ -36,16 +36,22 @@
             <artifactId>jackson-datatype-jsr310</artifactId>
             <version>2.10.1</version>
         </dependency>
-<!--        解析xml-->
+        <!--        解析xml-->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
             <version>2.10.1</version>
         </dependency>
 
+        <!--        操作excel-->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
             <version>4.1.1</version>
         </dependency>
         <dependency>
@@ -53,6 +59,23 @@
             <artifactId>easyexcel</artifactId>
             <version>2.1.4</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

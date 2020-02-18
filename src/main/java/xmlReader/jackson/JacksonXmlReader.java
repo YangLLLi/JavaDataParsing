@@ -1,5 +1,6 @@
 package xmlReader.jackson;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.IOException;
@@ -21,8 +22,11 @@ public class JacksonXmlReader {
     public static void test() throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
         URL resource = JacksonXmlReader.class.getResource("test.xml");
-        Path path = Paths.get(resource.getPath().substring(1));
         Book book = xmlMapper.readValue(resource, Book.class);
         System.out.println(book);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String s = objectMapper.writeValueAsString(book);
+        System.out.println(s);
     }
 }
