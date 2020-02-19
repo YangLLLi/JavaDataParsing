@@ -2,7 +2,6 @@ package jsonReader;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
@@ -21,7 +20,7 @@ import java.util.HashMap;
  *
  * @author Yang
  */
-public class JacksonReader {
+public class JacksonDemo {
     public static void main(String[] args) {
         try {
             objectMapperTest();
@@ -50,8 +49,7 @@ public class JacksonReader {
         person.setMoney("xxx");
         person.setBirthday(LocalDate.of(2000, Month.JANUARY, 1));
 
-        JacksonReader jr = new JacksonReader();
-        URL resource = jr.getClass().getResource("test.json");
+        URL resource = JacksonDemo.class.getResource("test.json");
         String path = resource.getPath().substring(1);
         OutputStream out = new FileOutputStream(path);
 //        json序列化

@@ -1,15 +1,14 @@
 package xmlReader;
 
-import javax.lang.model.element.VariableElement;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.InputStream;
 
-public class StaxReader {
+public class StaxDemo {
     public static void main(String[] args) {
-        StaxReader staxReader = new StaxReader();
+        StaxDemo staxReader = new StaxDemo();
         InputStream input = staxReader.getClass().getResourceAsStream("test.xml");
         try {
             XMLStreamReader xmlStreamReader = getXmlStreamReader(input);

@@ -22,10 +22,10 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class DomReader {
+public class DomDemo {
 
     public static void main(String[] args) {
-        DomReader domReader = new DomReader();
+        DomDemo domReader = new DomDemo();
         InputStream input = domReader.getClass().getResourceAsStream("test.xml");
         Element root = null;
         try {
